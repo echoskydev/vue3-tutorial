@@ -80,7 +80,7 @@
     </header>
 </template>
 
-<style lang="css">
+<style scoped>
   .router-link-exact-active{
     color: purple;
   }

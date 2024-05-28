@@ -116,7 +116,7 @@
     </aside>
 </template>
 
-<style lang="css">
+<style scoped>
   .router-link-active, .router-link-exact-active {
     color: aqua;
   }
