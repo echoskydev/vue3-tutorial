@@ -108,7 +108,7 @@ const handleSubmit = () => {
         setTimeout(() => {
           router.push({ name: 'Login' })
         }, 1500)
-        
+
       }
 
     }).catch(error => {
@@ -141,7 +141,7 @@ const handleSubmit = () => {
           </div>
 
           <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
-            
+
             <div class="w-full">
 
               <h1 class="mb-4 text-xl font-semibold dark:text-gray-200">สมัครสมาชิกใหม่</h1>
@@ -149,72 +149,72 @@ const handleSubmit = () => {
               <form @submit.prevent="handleSubmit">
 
                 <label class="block mb-2 text-sm  dark:text-gray-200" for="fullname">ชื่อ-สกุล</label>
-                <input 
+                <input
                   v-model="formData.fullname"
                   :class="{ 'border-red-500': v$.$dirty && v$.fullname.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="fullname" 
-                  name="fullname" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="fullname"
+                  name="fullname"
                   type="text">
                 <div v-for="error of v$.fullname.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
                 </div>
-                
+
                 <label class="block mt-3 mb-2 text-sm dark:text-gray-200" for="username">ชื่อผู้ใช้</label>
-                <input 
+                <input
                   v-model="formData.username"
                   :class="{ 'border-red-500': v$.$dirty && v$.username.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="username" 
-                  name="username" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="username"
+                  name="username"
                   type="text">
                 <div v-for="error of v$.username.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
                 </div>
 
                 <label class="block mt-3 mb-2 text-sm dark:text-gray-200" for="email">อีเมล์</label>
-                <input 
+                <input
                   v-model="formData.email"
                   :class="{ 'border-red-500': v$.$dirty && v$.email.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="email" 
-                  name="email" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="email"
+                  name="email"
                   type="text">
                 <div v-for="error of v$.email.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
                 </div>
 
                 <label class="block mt-3 mb-2 text-sm dark:text-gray-200" for="mobile">เบอร์โทรศัพท์</label>
-                <input 
+                <input
                   v-model="formData.mobile"
                   :class="{ 'border-red-500': v$.$dirty && v$.mobile.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="mobile" 
-                  name="mobile" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="mobile"
+                  name="mobile"
                   type="text">
                 <div v-for="error of v$.mobile.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
                 </div>
 
                 <label class="block mt-3 mb-2 text-sm dark:text-gray-200" for="password">รหัสผ่าน</label>
-                <input 
+                <input
                   v-model="formData.password"
                   :class="{ 'border-red-500': v$.password.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="password" 
-                  name="password" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="password"
+                  name="password"
                   type="password">
                 <div v-for="error of v$.password.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
                 </div>
-    
+
                 <label class="block mt-3 mb-2 text-sm dark:text-gray-200" for="confirm_password">ยืนยันรหัสผ่าน</label>
-                <input 
+                <input
                   v-model="formData.confirm_password"
                   :class="{ 'border-red-500': v$.confirm_password.$error }"
-                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none" 
-                  id="confirm_password" 
-                  name="confirm_password" 
+                  class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                  id="confirm_password"
+                  name="confirm_password"
                   type="password">
                 <div v-for="error of v$.confirm_password.$errors" :key="error.$uid">
                   <div class="text-sm mt-2 text-red-700">{{ error.$message }}</div>
@@ -227,7 +227,7 @@ const handleSubmit = () => {
                   <span class="ml-2">ฉันยอมรับ <span class="underline">เงื่อนไขการใช้งานระบบ</span>
                   </span>
                 </label>
-                
+
                 <button
                   class="w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg cursor-pointer active:bg-purple-600 hover:bg-purple-700 flex items-center justify-center"
                   type="submit"
@@ -250,7 +250,7 @@ const handleSubmit = () => {
                     </svg>
                   </span>
                   {{ loading ? 'กำลังประมวลผล...' : 'สมัครสมาชิก' }}
-                </button>                
+                </button>
 
               </form>
 
